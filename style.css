@@ -1,118 +1,130 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-::selection {
-  color: #000;
-  background: #fff;
-}
-nav {
-  position: fixed;
-  background: #1b1b1b;
-  width: 100%;
-  padding: 10px 0;
-  z-index: 12;
-}
-nav .menu {
-  max-width: 1250px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-}
-.menu .logo a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 35px;
-  font-weight: 600;
-}
-.menu ul {
-  display: inline-flex;
-}
-.menu ul li {
-  list-style: none;
-  margin-left: 7px;
-}
-.menu ul li:first-child {
-  margin-left: 0px;
-}
-.menu ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 8px 15px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-.menu ul li a:hover {
-  background: #fff;
-  color: black;
-}
-.img {
-  background: url("training-bg-image.jpg") no-repeat;
-  width: 100%;
+html, body {
+  width: 100vw;
   height: 100vh;
+  margin: 0;
+  background-color: #6f8e9c;
+  background: url("training-bg-image.jpg") no-repeat;;
   background-size: cover;
-  background-position: center;
-  position: relative;
+  font-family:  "Poppins", sans-serif;
+
 }
-.img::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.4);
+
+section #services {
+  text-align: center;
+  transform: translatez(0);
+  position: fixed;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
 }
-.center {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  padding: 0 20px;
+section #services h2 {
+  margin: 80px 0px 40px;
+  color: #2c2a2a;
+ 
+  /* text-transform: uppercase; */
   text-align: center;
 }
-.center .title {
-  color: #fff;
-  font-size: 55px;
-  font-weight: 600;
+section #services li {
+  width: 500px;
+  height: 140px;
+  display: inline-block;
+  margin: 20px;
+  list-style: none;
 }
-.center .sub_title {
-  color: #fff;
-  font-size: 52px;
-  font-weight: 600;
+section #services li div {
+  width: 500px;
+  height: 120px;
+  color: #74d4b3;
+  font-size: 3.4em;
+  text-align: center;
+  line-height: 120px;
+  background-color: #fff;
+  transition: all 0.5s ease;
 }
-.center .btns {
+section #services li a {
+  color: #77cc6d;
+}
+section #services li div:hover {
+  transform: rotate(360deg);
+  border-radius: 100px;
+}
+section #services li span {
+  width: 120px;
+  height: 20px;
+  display: block;
+  padding: 15px 0px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  text-align: center;
+}
+.credits a {
+  display: block;
+  text-align: center;
+  color: #74d4b3;
+  text-decoration: none;
+  font-size: 24px;
+  margin-top: 50px;
+  background: white;
+  padding: 20px;
+  max-width: 300px;
+}
+
+
+.btns {
   margin-top: 20px;
 }
-.center .btns button {
+ .btns button {
   height: 55px;
-  width: 250px;
+  width: 500px;
   border-radius: 5px;
   border: none;
   margin: 0 10px;
-  border: 2px solid white;
-  font-size: 20px;
-  font-weight: 500;
+  border: 2px solid rgb(39, 37, 37);
+  font-size: 25px;
+  font-weight: 600;
+  font-family:  "Poppins", sans-serif;
   padding: 0 10px;
   cursor: pointer;
   outline: none;
   transition: all 0.3s ease;
 }
-.center .btns button{
-  color: #fff;
+ .btns button{
+  color: #1b1919;
   background: none;
 }
 .btns button:hover {
   background: white;
   color: black;
 }
-/* .center .btns button:last-child {
-  background: white;
-  color: black;
-} */
+img{
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+    max-width: 100%;
+    height: auto;
+
+}
+
+@media screen and (min-width: 601px)   {
+  h2 {
+    font-size: 55px;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (min-width: 501px) and (max-width:600px) {
+  h2 {
+    font-size: 25px;
+  }
+  @media screen and (min-width: 401px) and (max-width:500px) {
+    h2 {
+      font-size: 20px;
+    }
+  @media screen and (max-width: 400px) {
+    h2 {
+      font-size:15px;
+    }
+}
